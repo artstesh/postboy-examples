@@ -1,0 +1,5 @@
+<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px" class="timer-wrapper">
+  <div class="timer">You're here for {{seconds}} seconds</div>
+  <div class="timer-button" *ngIf="isOn" (click)="timeOff()">Stop</div>
+  <div class="timer-button" *ngIf="!isOn" (click)="timeOn()">Start</div>
+</div>

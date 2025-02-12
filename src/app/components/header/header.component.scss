@@ -1,0 +1,13 @@
+
+.header-wrapper {
+  padding: 0 30px;
+
+  .route-link {
+    cursor: pointer;
+
+    &.active {
+      font-weight: bold;
+      color: green;
+    }
+  }
+}

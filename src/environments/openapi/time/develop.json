@@ -1,0 +1,11 @@
+{
+   "$schema": "../../../../node_modules/ng-openapi-gen/ng-openapi-gen-schema.json",
+   "input": "https://timeapi.io/swagger/v0.99.4/swagger.json",
+   "output": "src/app/api/time",
+   "ignoreUnusedModels": false,
+   "indexFile": true,
+   "removeStaleFiles": true,
+   "skipJsonSuffix": true,
+   "module": "TimeApiModule",
+   "configuration": "TimeApiConfiguration"
+}

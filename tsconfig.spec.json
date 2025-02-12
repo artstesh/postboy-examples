@@ -6,6 +6,9 @@
     "outDir": "./out-tsc/spec",
     "types": [
       "jasmine"
+    ],
+    "plugins": [
+      { "transform": "@artstesh/forger/lib/utils/transformer" }
     ]
   },
   "include": [

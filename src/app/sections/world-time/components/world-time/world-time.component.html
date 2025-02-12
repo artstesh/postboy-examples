@@ -1,0 +1,11 @@
+<div fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center start">
+  <div *ngIf="time">
+    {{time.dateTime}}
+  </div>
+  <div fxLayout="row" fxLayoutGap="20px">
+    <div fxLayout="column"><div>Latitude:</div><input type="number" [(ngModel)]="lat"></div>
+    <div fxLayout="column"><div>Longitude:</div><input type="number" [(ngModel)]="lng"></div>
+  </div>
+  <button *ngIf="!loading" (click)="renew()">Update</button>
+  <div *ngIf="loading">Loading...</div>
+</div>
