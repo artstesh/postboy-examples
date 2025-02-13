@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+button {
+  border: none;
+  background-color: #7392e6;
+  color: white;
+  font-weight: bold;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+input {
+  border: 1px solid #7392e6;
+  padding-left: 10px;
+  border-radius: 9px;
+  height: 40px;
+}
+
+&:focus,
+input:hover {
+  outline: none;
+}
