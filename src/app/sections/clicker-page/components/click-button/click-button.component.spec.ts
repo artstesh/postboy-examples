@@ -2,10 +2,10 @@ import {ComponentFixture} from '@angular/core/testing';
 import {ClickButtonComponent} from './click-button.component';
 import {AppPostboyService} from '../../../../services/app-postboy.service';
 import {ButtonClickEvent} from '../../messages/events/button-click.event';
-import {PostboyServiceMock} from '@artstesh/postboy';
 import {MockBuilder, MockProvider, MockRender, ngMocks} from 'ng-mocks';
 import {Subject} from 'rxjs';
 import {should} from '@artstesh/it-should';
+import {PostboyServiceMock} from '@artstesh/postboy-testing';
 
 describe('ClickButtonComponent', () => {
   let component: ClickButtonComponent;

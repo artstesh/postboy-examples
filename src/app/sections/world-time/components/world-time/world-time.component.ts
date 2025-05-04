@@ -1,19 +1,17 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component} from '@angular/core';
 import {AppPostboyService} from '../../../../services/app-postboy.service';
 import {CurrentTime} from '../../../../api/time';
 import {GetCurrentTimeQuery} from '../../messages/queries/get-current-time.query';
-import {DefaultLayoutAlignDirective, DefaultLayoutDirective, DefaultLayoutGapDirective} from '@ngbracket/ngx-layout';
+import {FlexModule} from '@ngbracket/ngx-layout';
 import {NgIf} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-world-time',
   imports: [
-    DefaultLayoutDirective,
-    DefaultLayoutGapDirective,
-    DefaultLayoutAlignDirective,
     NgIf,
-    FormsModule
+    FormsModule,
+    FlexModule
   ],
   templateUrl: './world-time.component.html',
   standalone: true,

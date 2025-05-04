@@ -1,18 +1,15 @@
-import {Component, importProvidersFrom, OnDestroy} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component, OnDestroy} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
 import {AppMessageRegistrator} from './services/app-message-registrator.service';
-import {DefaultLayoutDirective, DefaultLayoutGapDirective, FlexFillDirective} from '@ngbracket/ngx-layout';
 import {HeaderComponent} from './components/header/header.component';
 import {TimeInAppService} from './services/time-in-app.service';
-import {TimeApiModule} from './api/time';
-import {environments} from '../environments/environment';
-import {HttpClientModule} from '@angular/common/http';
+import {FlexModule} from '@ngbracket/ngx-layout';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FlexFillDirective, DefaultLayoutDirective,
-    DefaultLayoutGapDirective, HeaderComponent
-    ],
+  standalone: true,
+  imports: [RouterOutlet, HeaderComponent, FlexModule
+  ],
   providers: [AppMessageRegistrator,TimeInAppService
   ],
   templateUrl: './app.component.html',

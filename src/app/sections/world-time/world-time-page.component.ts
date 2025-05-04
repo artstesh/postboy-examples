@@ -2,21 +2,13 @@ import {ChangeDetectionStrategy, Component, OnDestroy} from '@angular/core';
 import {WorldTimePageMessageRegister} from './services/world-time-page-message-register.service';
 import {TimeInternalService} from '../../api-internal/time-internal.service';
 import {WorldTimeComponent} from './components/world-time/world-time.component';
-import {
-  DefaultLayoutAlignDirective,
-  DefaultLayoutDirective,
-  DefaultLayoutGapDirective,
-  FlexFillDirective
-} from '@ngbracket/ngx-layout';
+import {FlexModule} from '@ngbracket/ngx-layout';
 
 @Component({
   selector: 'app-world-time-page',
   imports: [
     WorldTimeComponent,
-    DefaultLayoutAlignDirective,
-    DefaultLayoutDirective,
-    DefaultLayoutGapDirective,
-    FlexFillDirective
+    FlexModule
   ],
   templateUrl: './world-time-page.component.html',
   standalone: true,

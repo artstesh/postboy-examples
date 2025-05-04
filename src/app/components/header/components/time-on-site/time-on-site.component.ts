@@ -1,18 +1,14 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {AppPostboyService} from '../../../../services/app-postboy.service';
 import {TimeInAppEvent} from '../../../../messages/events/time-in-app.event';
-import {TimeInAppOffCommand} from '../../../../messages/commands/time-in-app-off.command';
-import {TimeInAppOnCommand} from '../../../../messages/commands/time-in-app-on.command';
-import {DefaultLayoutAlignDirective, DefaultLayoutDirective, DefaultLayoutGapDirective} from '@ngbracket/ngx-layout';
+import {FlexModule} from '@ngbracket/ngx-layout';
 import {NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-time-on-site',
   imports: [
-    DefaultLayoutDirective,
-    DefaultLayoutAlignDirective,
-    DefaultLayoutGapDirective,
-    NgIf
+    NgIf,
+    FlexModule
   ],
   templateUrl: './time-on-site.component.html',
   standalone: true,
@@ -35,13 +31,13 @@ export class TimeOnSiteComponent implements OnInit {
 
   timeOff(): void {
     this.isOn = false;
-    this.postboy.fire(new TimeInAppOffCommand());
+    this.postboy.lock(TimeInAppEvent);
     this.detector.detectChanges();
   }
 
   timeOn(): void {
     this.isOn = true;
-    this.postboy.fire(new TimeInAppOnCommand());
+    this.postboy.unlock(TimeInAppEvent);
     this.detector.detectChanges();
   }
 
